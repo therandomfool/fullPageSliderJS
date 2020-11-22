@@ -2,4 +2,4 @@
 
 
 
-![fullpageslider](img/underconstruction.gif)
+![fullpageslider](img/uc.gif)
