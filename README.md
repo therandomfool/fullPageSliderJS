@@ -2,4 +2,4 @@
 
 
 
-![fullpageslider](.gif)
+![fullpageslider](underconstruction.gif)
