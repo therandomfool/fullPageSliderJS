@@ -13,10 +13,12 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     z-index: 1000;
     padding: 30px 100px;
+    background: rgba(0,0,0,0.385);
 
 }
 
@@ -26,6 +28,7 @@ header .logo{
     font-weight: 700;
     font-size: 2em;
     text-decoration: none;
+    text-shadow: 0 1px 3px black;
 }
 
 header ul{
@@ -68,7 +71,7 @@ header ul li a{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* opacity: 0; */
+    opacity: 0;
     transition: 0.5s;
     background-position: center;
 
@@ -84,23 +87,37 @@ header ul li a{
     transform: translateY(-50%);
     right: 0;
     width: 80px;
-
+    margin-right: 1rem;
 }
 
 .controls li{
     position: relative;
     width: 80px;
     height: 80px;
-    background: #fff;
+    background: navy;
+    opacity: .49;
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 180%;
+    margin-top: 9px;
+    border: 3px solid black;
 }
 
 .controls li:hover{
-    background: #ffeb3b;
+    background: darkgoldenrod;
+    
+}
+
+.controls li:hover.left{
+    transform: translateX(-10px);
+    
+}
+
+.controls li:hover.right{
+    transform: translateX(10px);
 }
 
 .controls li:before{
@@ -108,11 +125,58 @@ header ul li a{
     position: absolute;
     width: 20px;
     height: 20px;
-    border-left: 3px solid #111;
-    border-bottom: 3px solid #111;
+    border-left: 5px solid ghostwhite;
+    border-bottom: 5px solid ghostwhite;
     transform: rotate(45deg);
 }
 
 .controls li:nth-child(2):before{
     transform: rotate(225deg);
+}
+
+.contentBx{
+    position: absolute;
+    bottom: 0;
+    max-width: 700px;
+
+}
+
+.contentBx div{
+    display: none;
+
+}
+
+.contentBx div.active{
+    display: block;
+    padding: 30px;
+    padding-left: 100px;
+    background: rgba(0,0,0,0.7);
+    text-shadow: 0 2px 0 darkslateblue;
+}
+
+.contentBx div h2{
+    color: #fff;
+    font-size: 2em;
+    
+}
+.contentBx div p{
+    color: #fff;
+    font-size: 1.1em;
+
+}
+
+.contentBx div a{
+    color: #111;
+    font-size: .9em;
+    display: inline-block;
+    padding-left: 10px 30px;
+    background: #fff;
+    margin-top: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px;
+    text-shadow: none;
+
 }
